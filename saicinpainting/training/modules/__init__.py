@@ -1,8 +1,9 @@
 import logging
 
-from saicinpainting.training.modules.ffc import FFCResNetGenerator
-from saicinpainting.training.modules.pix2pixhd import GlobalGenerator, MultiDilatedGlobalGenerator, \
+from .ffc import FFCResNetGenerator
+from .pix2pixhd import GlobalGenerator, MultiDilatedGlobalGenerator, \
     NLayerDiscriminator, MultidilatedNLayerDiscriminator
+
 
 def make_generator(config, kind, **kwargs):
     logging.info(f'Make generator {kind}')
